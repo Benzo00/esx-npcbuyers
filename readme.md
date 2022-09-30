@@ -1,6 +1,6 @@
 <h1 align='center'>[ESX] NPC Buyers</a></h1>
 
-This is a clean and elegant resource that allows you to **effortlessly** add NPCs that your players can interact with and sell their contraband to. All you need is a cool name, an item and some coords, and you too, can have NPCs that will appear and disappear at certain times of the time, *Which*, are automatically randomly generated on resource start, so that, nobody, not even God himself will know when Shady Mcgrady will appear.
+This is a clean and elegant resource that allows you to **effortlessly** add NPCs that your players can interact with and sell their contraband to. All you need is a cool name, an item and some coords, and you too, can have NPCs that will appear and disappear at certain times of the day, *Which*, are automatically randomly generated on resource start, so that, nobody, not even God himself will know when Shady Mcgrady will appear.
 
 Like how this sounds? Dynamic time based spawning, easy to setup config, context menu based, qtarget support and much more? well read the rest of this Read Me Now!
 
