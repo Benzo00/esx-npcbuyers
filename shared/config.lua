@@ -14,9 +14,9 @@ Config.peds = {
     CloseTime = 4, -- dont change this
     item = {
       name = "bread",
-      price = math.random(20, 40)
-      MaxSell = 10 -- Max amount of items you can sell at once
-      MinSell = 1 -- Min amount of items you can sell at once
+      price = math.random(20, 40),
+      MaxSell = 10, -- Max amount of items you can sell at once
+      MinSell = 1, -- Min amount of items you can sell at once
     }
   }
 }
