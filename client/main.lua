@@ -97,7 +97,7 @@ if not Config.Qtarget then
                   local distance = #(playerCoords - ped.location.xyz)
                   if distance < 5.0 then
                       sleep = 0
-                      ESX.ShowFloatingHelpNotification("~INPUT_PICKUP~ -> suck a dick", ped.location.xyz + vec3(0, 0, 1.8))
+                      ESX.ShowFloatingHelpNotification("~INPUT_PICKUP~ -> Interact", ped.location.xyz + vec3(0, 0, 1.8))
                       if distance < 2.0 then
                           if IsControlJustPressed(0, 38) then
                               Menu(ped)
