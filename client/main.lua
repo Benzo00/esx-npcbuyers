@@ -14,10 +14,10 @@ local function SpawnPed(Ped)
     SetModelAsNoLongerNeeded(joaat(Ped.SpawnName))
     SpawnedPeds[Ped.Name] = ped
     if Config.Qtarget then 
-      exports.qtarget:AddTargetEntity(entity, {
+      exports.qtarget:AddTargetEntity(ped, {
         options = {
           {
-            icon = "fas fa-box-circle-check",
+            icon = "far fa-comment-dots",
             label = "Talk to "..Ped.Name,
             action = function(entity)
               Menu(Ped)
