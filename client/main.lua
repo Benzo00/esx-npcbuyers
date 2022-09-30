@@ -78,7 +78,7 @@ function Menu(Ped)
         inputMin = Ped.item.MinSell,
         inputMax = Ped.item.MaxSell, 
         index = "quantity",
-    }
+    }, 
     {
         icon = "fa-solid fa-dollar-sign",
         title = "Sell Goods",
