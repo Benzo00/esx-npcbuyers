@@ -4,7 +4,7 @@ This is a clean and elegant resource that allows you to **effortlessly** add NPC
 
 Like how this sounds? Dynamic time based spawning, easy to setup config, context menu based, qtarget support and much more? well read the rest of this Read Me Now!
 
-![Preview]()
+![Preview](https://cdn.discordapp.com/attachments/939573467349655602/1025210306013708358/unknown.png)
 
 <h1 align='center'>Install Guide</a></h1>
 
