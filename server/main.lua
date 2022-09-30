@@ -22,16 +22,16 @@ function FindClosestPed(player)
     end
 end
 
-ESX.RegisterServerCallback('buythingy', function(source, cb)
+ESX.RegisterServerCallback('buythingy', function(source, cb, quantity)
     local xPlayer = ESX.GetPlayerFromId(source)
     local ClosestPed = FindClosestPed(source)
 
     if ClosestPed ~= nil then
-       if xPlayer.getInventoryItem(ClosestPed.item.name).count > 0 then 
-        xPlayer.removeInventoryItem(ClosestPed.item.name, 1)
-        xPlayer.addMoney(ClosestPed.item.price)
+       if xPlayer.getInventoryItem(ClosestPed.item.name).count > quantity then 
+        xPlayer.removeInventoryItem(ClosestPed.item.name, quantity)
+        xPlayer.addMoney(ClosestPed.item.price * quantity)
         local itemLabel = ESX.GetItemLabel(ClosestPed.item.name)
-        TriggerClientEvent('esx:showNotification', source, 'You sold a ~b~'.. itemLabel .. '~s~ for $~g~' ..  ClosestPed.item.price, "success")
+        TriggerClientEvent('esx:showNotification', source, 'You sold a ~b~'.. quantity ..'x '.. itemLabel .. '~s~ for $~g~' ..  ClosestPed.item.price, "success")
         cb(true)
     else
       local itemLabel = ESX.GetItemLabel(ClosestPed.item.name)
