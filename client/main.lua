@@ -63,24 +63,46 @@ end
 function Menu(Ped)
     local Elements = {{
         unselectable = true,
-        icon = "fas fa-info-circle",
+        icon = "far fa-comment-dots",
         title = ("%s"):format(Ped.Name),
         description = ("%s"):format(Ped.description),
-    }, {
-        icon = "",
+    },
+    {
+        icon = "fa-solid fa-scale-balanced",
+        title = "Select Quantity",
+        description = "Qauntity of Drugs to Sell",
+        input = true,
+        inputType = "number", 
+        inputPlaceholder = "Number...", 
+        inputValue = 1, 
+        inputMin = Ped.item.MinSell,
+        inputMax = Ped.item.MaxSell, 
+        index = "quantity",
+    }
+    {
+        icon = "fa-solid fa-dollar-sign",
         title = "Sell Goods",
         description = "Attempt to sell your goods to "..Ped.Name,
-        value = "shit"
+        value = "sell"
+    },
+    {
+        icon = "fa-solid fa-xmark",
+        title = "Close",
+        description = "Leave "..Ped.Name,
+        value = "leave"
     }}
 
     ESX.OpenContext("right", Elements, function(menu, element)
-        if element.value == "shit" then
+        if element.value == "sell" then
                  ESX.TriggerServerCallback('buythingy', function(cb)
                   if cb then
                     Animation(Ped)
+                    ESX.CloseContext()
                   end
-                  ESX.CloseContext()
-              end)
+              end, menu.eles[2].inputValue)
+        elseif 
+            element.value == "leave" then
+            ESX.CloseContext()
           end
         end, function(menu)
     end)
