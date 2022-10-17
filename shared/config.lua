@@ -1,6 +1,6 @@
 Config = {}
 
-Config.Qtarget = false -- Set to false if you don't want to use qtarget
+Config.ox_target = false -- Set to false if you don't want to use qtarget
 
 Config.peds = {
   {
