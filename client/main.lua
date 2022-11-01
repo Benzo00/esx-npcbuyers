@@ -13,8 +13,8 @@ local function SpawnPed(Ped)
     TaskStartScenarioInPlace(ped, "WORLD_HUMAN_STAND_IMPATIENT", 0, true)
     SetModelAsNoLongerNeeded(joaat(Ped.SpawnName))
     SpawnedPeds[Ped.Name] = ped
-    if Config.Qtarget then 
-      exports.qtarget:AddTargetEntity(ped, {
+    if Config.ox_target then 
+      exports.ox_target:AddTargetEntity(ped, {
         options = {
           {
             icon = "far fa-comment-dots",
@@ -108,7 +108,7 @@ function Menu(Ped)
     end)
 end
 
-if not Config.Qtarget then
+if not Config.ox_target then
   CreateThread(function()
       while true do
           local sleep = 1500
