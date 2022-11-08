@@ -21,6 +21,8 @@ Config.peds = {
   }
 }
 
+Config.TypeMoney = {pay = "black_money"} -- Select type of money pay (money, black_money, bank)
+
 --- Dont touch Bellow this line
 
 function PickTimes()
