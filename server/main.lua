@@ -27,9 +27,9 @@ ESX.RegisterServerCallback('buythingy', function(source, cb, quantity)
     local ClosestPed = FindClosestPed(source)
 
     if ClosestPed ~= nil then
-       if xPlayer.getInventoryItem(ClosestPed.item.name).count > quantity then 
+       if xPlayer.getInventoryItem(ClosestPed.item.name).count >= quantity then 
         xPlayer.removeInventoryItem(ClosestPed.item.name, quantity)
-        xPlayer.addMoney(ClosestPed.item.price * quantity)
+        xPlayer.addAccountMoney(ClosestPed.item.typePay, ClosestPed.item.price * quantity)
         local itemLabel = ESX.GetItemLabel(ClosestPed.item.name)
         TriggerClientEvent('esx:showNotification', source, 'You sold a ~b~'.. quantity ..'x '.. itemLabel .. '~s~ for $~g~' ..  ClosestPed.item.price, "success")
         cb(true)
